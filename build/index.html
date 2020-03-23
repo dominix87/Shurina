@@ -29,7 +29,7 @@
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
             <div class="textBlock">
-              <div class="preTitle">Бесплатный онлайн-семинар Виктории Шуриной Х месяц 19:00 по Москве</div>
+              <div class="preTitle">Бесплатный онлайн-семинар<br class="later2"> Виктории Шуриной Х месяц 19:00 по Москве</div>
               <h1 class="title"><span>Как реализовать</span><span class="middle">ваше самое</span><span>сильное желание</span></h1>
               <div class="description content_text">Хватит просто мечтать! Всего за 100 минут вы получите действенные инструменты, чтобы воплотить ваши цели в&nbsp;реальность</div>
               <div class="btnWrap"><a href="#">
@@ -42,11 +42,13 @@
             </div>
           </div>
           <div class="formBlock">
-            <div class="topElement"></div>
-            <div class="wrapper">
-              <div class="title">Бронируйте ваше участие в&nbsp;онлайн-семинаре прямо сейчас</div>
-              <div class="text content_text">В дополнение вы получаете на почту <span>запись занятия из дорогостоящей программы “Наставник” абсолютно БЕСПЛАТНО</span></div>
-              <form onsubmit="Index.sendInit(this);return false" novalidate>
+            <div class="topElement"><a class="videoLink openVideo" href="https://www.youtube.com/watch?v=LthaTLyRFek"><img src="img/videoBtn.png" alt=""></a>
+              <div class="rotateText"><span>з</span><span>а</span><span>п</span><span>и</span><span>с</span><span>ь</span><span>н</span><span>а</span><span>з</span><span>а</span><span>н</span><span>я</span><span>т</span><span>и</span><span>я</span><span>п</span><span>р</span><span>о</span><span>г</span><span>р</span><span>а</span><span>м</span><span>м</span><span>ы</span><span>«</span><span>н</span><span>а</span><span>с</span><span>т</span><span>а</span><span>в</span><span>н</span><span>и</span><span>к</span><span>»</span><span>б</span><span>е</span><span>с</span><span>п</span><span>л</span><span>а</span><span>т</span><span>н</span><span>о</span></div>
+            </div>
+            <div class="wrapper" id="formZone">
+              <div class="title">Бронируйте ваше участие<br class='later2'> в&nbsp;онлайн&#8209;семинаре прямо сейчас</div>
+              <div class="text content_text">В дополнение вы получаете на почту <span>запись занятия из дорогостоящей<br class='later2'> программы “Наставник” абсолютно БЕСПЛАТНО</span></div>
+              <form id="mainForm" onsubmit="Index.sendInit(this);return false" novalidate>
                 <input type="hidden" name="project_name" value="Shurina">
                 <input type="hidden" name="admin_email" value="">
                 <input type="hidden" name="registration_type" value="pop-up форма">
@@ -70,10 +72,10 @@
                 <input type="hidden" name="click_id" value="&lt;?php echo $data[&quot;click_id&quot;]?&gt;">
                 <input type="hidden" name="affilliate_id" value="&lt;?php echo $data[&quot;affiliate_id&quot;]?&gt;">
                 <div class="inputWrapper">
-                  <input placeholder="Имя" name="name" type="text" required>
+                  <input placeholder="Ваш Email" name="email" type="email" required>
                 </div>
-                <div class="inputWrapper">
-                  <input placeholder="Телефон" name="phone" type="tel" required>
+                <div class="inputWrapper" id="hiddenPhone">
+                  <input placeholder="Телефон" name="phone" type="tel">
                 </div>
                 <div class="btnWrap">
                   <button class="btn">Получить консультацию</button>
@@ -83,15 +85,18 @@
                 <input type="checkbox" id="smsReminder">
                 <label for="smsReminder">Напомнить об онлайн-семинаре по SMS</label>
               </div>
+              <div class="counterBlock">
+                <div class="counterText">Предложение актуально еще:</div>
+                <div class="counter" id="coundown"></div>
+              </div>
             </div>
-            <div class="counter"></div>
           </div>
         </div>
       </section>
       <section class="section2" id="section2">
         <div class="siteWidth container-fluid">
           <div class="titleBlock">
-            <h2 class="title">Что вас ждет на онлайн-семинаре</h2>
+            <h2 class="title">Что вас ждет<br class='later2'> на&nbsp;онлайн&#8209;семинаре</h2>
             <div class="description">Х месяц 19:00 по Москве</div>
           </div>
           <div class="itemsContent">
@@ -101,7 +106,7 @@
             </div>
             <div class="item">
               <div class="int">02</div>
-              <div class="text content_text">Вы забудете о том, что что-то может не получаться. Избавитесь от&nbsp;навязчивых мыслей <span>«вот если бы…, я бы уже давно имела то, что хочу».</span></div>
+              <div class="text content_text">Вы забудете о том, что что-то<br class='later2'> может не получаться. Избавитесь от&nbsp;навязчивых мыслей <span>«вот если бы…, я бы уже давно имела то, что хочу».</span></div>
             </div>
             <div class="absoluteEl"><img src="img/Bl2Img1.png" alt=""></div>
             <div class="item">
@@ -120,17 +125,17 @@
       </section>
       <section class="section3 classes" id="section3">
         <div class="siteWidth container-fluid">
-          <h2 class="title">Спикер Виктория Шурина</h2>
+          <h2 class="title">Спикер<br class='later2'> Виктория Шурина</h2>
           <div class="innerWrapper">
-            <div class="imageBlock"><img src="Bl3Img1.png" alt=""></div>
+            <div class="imageBlock"><img src="img/Bl3Img1.png" alt=""></div>
             <div class="textBlock">
               <div class="description">Автор уникальной методики дистанционного исцеления через подсознание и программы по раскрытию потенциала целителя</div>
-              <div class="text1 content_text"><span>Создатель, идейный вдохновитель и президент международной компании целителей «LBG»</span></div>
+              <div class="text1 content_text"><span>Создатель, идейный вдохновитель и президент<br class='later2'> международной компании целителей «LBG»</span></div>
               <div class="doubleBlock">
                 <div class="leftSide"><img src="img/Bl3Img2.jpg" alt="">
                   <div class="text">Создатель<br> Журнала LBG</div>
                 </div>
-                <div class="irghtSide">
+                <div class="rightSide">
                   <div class="text content_text">Писательница, тренер, автор семинаров и&nbsp;аудиопрограмм по&nbsp;темам дистанционного целительства, самореализации, лидерства и других.<br><br> Ежегодно консультирует 100 фирм и&nbsp;тренеров, а&nbsp;также проводит семинары для аудиторий 1000+ участников.</div>
                 </div>
               </div>
@@ -164,7 +169,7 @@
               </ul>
             </div>
             <div class="footerElement socials">
-              <div class="title">Присоединяйтесь к Виктории в соцсетях:</div>
+              <div class="title">Присоединяйтесь к Виктории в&nbsp;соцсетях:</div>
               <ul>
                 <li><a href="#" target="null">
                         <svg class="icon icon-instagram ">
@@ -186,7 +191,7 @@
       <div class="footerBottom">
         <div class="siteWidth container-fluid">
           <div class="innerWrapper">
-            <div class="text">© Виктория Шурина. Все права защищены. Любое копирование материалов разрешено только с согласия правообладателей. По всем вопросам обращайтесь: почта@почта</div><a class="rezartLogo" href="https://rezart.agency/" target="_blank">
+            <div class="text">© Виктория Шурина. Все права защищены. Любое копирование материалов разрешено только с&nbsp;согласия правообладателей. По всем вопросам обращайтесь: почта@почта</div><a class="rezartLogo" href="https://rezart.agency/" target="_blank">
                   <svg class="icon icon-rezart_logo ">
                     <use xlink:href="img/svg/sprite.svg#rezart_logo"></use>
                   </svg></a>

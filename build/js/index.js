@@ -22,14 +22,53 @@ var Index =
 
     $('input[name=phone]').mask('+38(099)999-99-99');
 
+    $('#hiddenPhone').hide();
 
 
+    $('#smsReminder').on('change', function(){
+      var mainForm = $('#mainForm'),
+        hiddenPhone = $('#hiddenPhone');
+
+      mainForm.toggleClass('triple');
+      hiddenPhone.toggleClass('opened').slideToggle();
+
+      if($(hiddenPhone).hasClass('opened')){
+        $(hiddenPhone).find('input').prop("required", true)
+      }
+      else{
+        $(hiddenPhone).find('input').prop("required", false);
+      }
+
+
+    });
 
     Index.magnificPopUp();
+    Index.countdown();
     // Index.fixedHeader();
     // Index.tinyAnimation();
   },
 
+  checkbox:function(){
+    if($('#smsReminder:checked')){
+      $('#hiddenPhone').show();
+    }
+    else{
+      $('#hiddenPhone').hide();
+    }
+  },
+
+  countdown: function(){
+
+      var austDay = new Date();
+      austDay = new Date(austDay.getFullYear() + 1, 1 - 1, 26);
+      // $('#defaultCountdown').countdown({until: austDay});
+      // $('#year').text(austDay.getFullYear());
+
+
+
+
+    $('#coundown').countdown({until: +600, format: 'H,M,S',labels: ' , , '});
+  },
 
   tinyAnimation: function(){
     $('.line', '.schedule').viewportChecker({
