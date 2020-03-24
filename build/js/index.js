@@ -124,7 +124,7 @@ var Index =
     var id = $(fThis).attr('href');
     if( $(id).length != 0)
     {
-      $('html, body').animate({scrollTop: ($(id).offset().top - 40)}, 1500);
+      $('html, body').animate({scrollTop: ($(id).offset().top)}, 1500);
     }
   },
 
