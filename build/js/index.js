@@ -113,9 +113,9 @@ var Index =
     var lastDate = dateEnd - myDate;
 
 
-    console.log(myDate);
-    console.log(dateEnd);
-    console.log(lastDate);
+    // console.log(myDate);
+    // console.log(dateEnd);
+    // console.log(lastDate);
 
 
     $('#coundown').countdown({until: lastDate, format: 'H,M,S'});
