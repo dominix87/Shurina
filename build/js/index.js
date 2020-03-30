@@ -20,7 +20,7 @@ var Index =
 
     $('input[name=phone]').mask('+999999999999?9999');
 
-    $('#hiddenPhone').hide();
+    // $('#hiddenPhone').hide();
 
 
     $('#smsReminder').on('change', function(){
@@ -28,7 +28,7 @@ var Index =
         hiddenPhone = $('#hiddenPhone');
 
       mainForm.toggleClass('triple');
-      hiddenPhone.toggleClass('opened').slideToggle();
+      hiddenPhone.toggleClass('opened');
 
       if($(hiddenPhone).hasClass('opened')){
         $(hiddenPhone).find('input').prop("required", true)
